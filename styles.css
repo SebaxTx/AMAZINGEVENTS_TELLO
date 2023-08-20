@@ -1,0 +1,36 @@
+
+
+.form-check-label{
+    font-size: 15px;
+}
+#Home{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    color: #a30ab1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+.img-fluid{
+    width: 400px; 
+    height: auto;
+    align-items: flex-start;
+
+}
+.navbar{
+    margin: 10px;
+}
+
+footer {
+    text-align: left;
+    margin-top: 30px;
+}
+
+footer a {
+    margin-left: 15px;
+}
