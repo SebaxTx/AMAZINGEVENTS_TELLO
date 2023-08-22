@@ -10,7 +10,7 @@
     min-height: 100px; /* Ajusta la altura según tus necesidades */
   }
 
-#Home {
+  .Home {
     font-size: 36px;
     font-weight: bold;
     font-family: "Arial", sans-serif;
