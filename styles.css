@@ -3,7 +3,14 @@
 .form-check-label{
     font-size: 15px;
 }
-#Home{
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Ajusta la altura según tus necesidades */
+  }
+
+#Home {
     font-size: 36px;
     font-weight: bold;
     font-family: "Arial", sans-serif;
@@ -14,10 +21,11 @@
     text-transform: uppercase;
     letter-spacing: 15px;
     margin: 20px 0;
-}
+  }
+  
 
 .img-fluid{
-    width: 400px; 
+    width: 200px; 
     height: auto;
     align-items: flex-start;
 
@@ -26,11 +34,26 @@
     margin: 10px;
 }
 
-footer {
-    text-align: left;
-    margin-top: 30px;
+.footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222020;
+    padding: 20px;
 }
 
-footer a {
-    margin-left: 15px;
+.footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0f0d0d25;
+    transition: color 0.3s ease;
 }
+
+.footer a:hover {
+    color: #a30ab1;
+}
+
+
+
+
