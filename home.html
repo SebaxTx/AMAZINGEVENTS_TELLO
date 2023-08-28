@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
 </head>
 
 <body style="background-color: black; color: white;">
     <img src="./assets/amazing_brand.png" class="img-fluid" alt="">
+
     <!-- MENÚ -->
     <nav>
         <ul class="nav justify-content-end nav nav-pills">
@@ -38,18 +40,18 @@
         <div class="container-fluid">
             <h1>HOME</h1>
         </div>
-      </nav>
+    </nav>
     <!-- categorias y barra -->
     <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <!-- Categorías -->
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">CATEGORIA 1</label>
+                <input class="form-check-input" type="checkbox" id="upcoming" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">Eventos Futuros</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">CATEGORIA 2</label>
+                <input class="form-check-input" type="checkbox" id="past" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Eventos Pasados</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
@@ -72,50 +74,13 @@
     </nav>
     <!-- fin categorias y barras -->
     <!-- TARJETAS -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Tarjetas de eventos -->
-        <div class="card card text-dark bg-dark mb-5" style="width: 18rem;">
-            <img src="./assets/music_concert.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title" style="color: #a30ab1;">TITULO DE EL EVENTO</h5>
-                <p class="card-text">DESCRIPCION DE EL EVENTO</p>
-                <a href="./details.html" class="btn btn-primary"><b>Details</b></a>
-            </div>
-        </div>
-            <!-- -_-_-_-_-_-_-_-_ -->
-
-        <div class="card card text-dark bg-dark mb-5" style="width: 18rem;">
-            <img src="./assets/cinema.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title" style="color: #a30ab1;">TITULO DE EL EVENTO</h5>
-                <p class="card-text">DESCRIPCION DE EL EVENTO</p>
-                <a href="./details.html" class="btn btn-primary"><b>Details</b></a>
-            </div>
-        </div>
-    <!-- -_-_-_-_-_-_-_-_ -->
-
-        <div class="card card text-dark bg-dark mb-5" style="width: 18rem;">
-            <img src="./assets/outing_to_the_museum.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title" style="color: #a30ab1;">TITULO DE EL EVENTO</h5>
-                <p class="card-text">DESCRIPCION DE EL EVENTO</p>
-                <a href="./details.html" class="btn btn-primary"><b>Details</b></a>
-            </div>
-        </div>
-            <!-- -_-_-_-_-_-_-_-_ -->
-
-        <div class="card card text-dark bg-dark mb-5" style="width: 18rem;">
-            <img src="./assets/costume_party.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title" style="color: #a30ab1;">TITULO DE EL EVENTO</h5>
-                <p class="card-text">DESCRIPCION DE EL EVENTO</p>
-                <a href="./details.html" class="btn btn-primary"><b>Details</b></a>
-            </div>
-        </div>
-            <!-- -_-_-_-_-_-_-_-_ -->
-
+    <div id="tarjetas-container" class="row row-cols-1 row-cols-md-3 g-4">
+        
     </div>
+    
     <!-- Fin de tarjetas -->
+    </div>
+
     <!-- Footer -->
 
     <footer class="footer">
@@ -131,10 +96,13 @@
     </footer>
     <!-- Fin de Footer -->
     <!-- Scripts -->
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <!-- Fin de Scripts -->
+        
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

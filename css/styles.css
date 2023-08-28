@@ -8,19 +8,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100px; /* Ajusta la altura según tus necesidades */
-  }
-
-  .Home {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: "Arial", sans-serif;
-    color: #a30ab1;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    margin: 20px 0;
+    margin: 10px;
   }
   
 
@@ -30,12 +18,10 @@
     align-items: flex-start;
 
 }
-.navbar{
-    margin: 10px;
-}
+
 
 .footer {
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,9 +36,7 @@
     transition: color 0.3s ease;
 }
 
-.footer a:hover {
-    color: #a30ab1;
-}
+
 #enviar{
     margin-top: 5px;
 }
@@ -93,14 +77,14 @@ border: #a30ab1;
 
 }
 
-.card-text{
-    color: #a30ab1;
-}
+
 
 .card{
-    margin: 10px;
+    margin: 20px;
+
 }
 
 li{
     color: #a30ab1;
 }
+
