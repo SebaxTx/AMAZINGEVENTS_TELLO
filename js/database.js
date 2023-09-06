@@ -266,7 +266,7 @@ function mostrarResultados(eventos) {
   });
 }
 
-// Manejar la búsqueda cuando se hace clic en el botón "Search"
+// Maneja la búsqueda cuando se hace clic en el botón "Search"
 searchButton.addEventListener("click", function () {
   const searchTerm = searchInput.value.trim().toLowerCase();
   const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();

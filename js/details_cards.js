@@ -1,6 +1,6 @@
 let tarjetasContainer = document.getElementById("tarjetas-container");
 
-// Obtener el ID del evento de la URL (puede variar según tu enfoque)
+// Obtener el ID del evento de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
@@ -41,7 +41,7 @@ if (eventId) {
     tarjeta.innerHTML = contenido;
     tarjetasContainer.appendChild(tarjeta);
   } else {
-    // Manejar el caso en el que no se encuentra el evento
+    //en caso de que no se encuentra el evento
     console.error("Evento no encontrado");
   }
 }
