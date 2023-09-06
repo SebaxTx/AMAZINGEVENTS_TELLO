@@ -32,10 +32,9 @@ function mostrarTarjetas(eventos) {
   });
 }
 
-// Llamada inicial para mostrar todas las tarjetas
 mostrarTarjetas(data.events);
 
-// Manejar la búsqueda cuando se hace clic en el botón "Search"
+// Maneja la búsqueda cuando se hace clic en el botón "Search"
 searchButton.addEventListener("click", function () {
   const searchTerm = searchInput.value.trim().toLowerCase();
   const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();

@@ -41,7 +41,7 @@ function mostrarTarjetas(eventos) {
 // Llama a la función para mostrar todas las tarjetas iniciales
 mostrarTarjetas(data.events);
 
-// Manejar la búsqueda cuando se hace clic en el botón "Search"
+// Maneja la búsqueda cuando se hace clic en el botón "Search"
 searchButton.addEventListener("click", function () {
   const searchTerm = searchInput.value.trim().toLowerCase();
   const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();
