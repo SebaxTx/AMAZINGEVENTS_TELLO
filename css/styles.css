@@ -7,15 +7,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px; /* Ajusta la altura según tus necesidades */
+    min-height: 10px; /* Ajusta la altura según tu  s necesidades */
     margin: 10px;
   }
   
 
 .img-fluid{
-    width: 200px; 
+    width: 259px; 
     height: auto;
-    align-items: flex-start;
+    align-items:center;
 
 }
 
@@ -79,12 +79,27 @@ border: #a30ab1;
 
 
 
-.card{
-    margin: 20px;
 
-}
 
 li{
     color: #a30ab1;
 }
 
+@media screen and (max-width: 768px) {
+    .nav {
+        font-size: 14px; /* Reducir tamaño de fuente */
+        padding-left: 10px; /* Ajustar espaciado superior */
+        justify-content: center; /* Centrar los elementos */
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Agregar margen inferior para espaciar los elementos */
+    }
+}
+#tarjetas-container{
+    margin: 20px;
+    padding: 20px;
+    display:flex;
+    justify-content: center
+    
+}
