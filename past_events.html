@@ -44,34 +44,17 @@
     <!-- categorias y barra -->
     <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <!-- Categorías -->
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">CATEGORIA 1</label>
+            <!-- Categorías y barra de búsqueda -->
+            <div id="menu-container">
+                <!-- Los checkboxes se generarán aquí -->
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">CATEGORIA 2</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                <label class="form-check-label" for="inlineCheckbox3">CATEGORIA 3</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                <label class="form-check-label" for="inlineCheckbox4">CATEGORIA 4</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                <label class="form-check-label" for="inlineCheckbox5">CATEGORIA 5</label>
-            </div>
-            <!-- Fin de categorías -->
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="search-button" class="btn btn-outline-success" type="button">Search</button>
             </form>
         </div>
     </nav>
+    
     <!-- fin categorias y barras -->
     <!-- TARJETAS -->
     <div id="tarjetas-container" class="row row-cols-1 row-cols-md-3 g-4">

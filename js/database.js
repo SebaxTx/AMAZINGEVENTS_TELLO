@@ -195,3 +195,96 @@ const data = {
   ],
 };
 
+const menuContainer = document.getElementById("menu-container");
+const resultadosContainer = document.getElementById("resultados-container");
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+
+// Función para generar checkboxes de categorías
+function generarCheckboxesCategorias() {
+  const categorias = new Set();
+
+  // Recorre los eventos para obtener todas las categorías únicas
+  data.events.forEach((evento) => {
+    categorias.add(evento.category);
+  });
+
+  // Crea un checkbox por cada categoría y los coloca en línea
+  categorias.forEach((categoria) => {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "categoria";
+    checkbox.value = categoria;
+    checkbox.className = "form-check-input";
+
+    const label = document.createElement("label");
+    label.textContent = categoria;
+    label.className = "form-check-label";
+
+    const div = document.createElement("div");
+    div.className = "form-check form-check-inline";
+    div.appendChild(checkbox);
+    div.appendChild(label);
+
+    menuContainer.appendChild(div);
+  });
+}
+
+// Llama a la función para generar los checkboxes de categorías
+generarCheckboxesCategorias();
+
+// Función para obtener las categorías seleccionadas
+function obtenerCategoriasSeleccionadas() {
+  const checkboxes = document.querySelectorAll('input[name="categoria"]');
+  const categoriasSeleccionadas = Array.from(checkboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value);
+  return categoriasSeleccionadas;
+}
+
+// Función para mostrar los resultados en el contenedor de resultados
+function mostrarResultados(eventos) {
+  // Borra el contenido existente del contenedor de resultados
+  resultadosContainer.innerHTML = "";
+
+  if (eventos.length === 0) {
+    resultadosContainer.innerHTML = "No se encontraron eventos.";
+    return;
+  }
+
+  eventos.forEach((evento) => {
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "card card text-dark bg-dark mb-3";
+    tarjeta.style.width = "18rem";
+
+    const contenido = `
+    <!-- Aquí deberías colocar el contenido de cada tarjeta -->
+    `;
+
+    tarjeta.innerHTML = contenido;
+    resultadosContainer.appendChild(tarjeta);
+  });
+}
+
+// Manejar la búsqueda cuando se hace clic en el botón "Search"
+searchButton.addEventListener("click", function () {
+  const searchTerm = searchInput.value.trim().toLowerCase();
+  const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();
+
+  // Borra el contenido existente del contenedor de resultados antes de mostrar los nuevos resultados
+  resultadosContainer.innerHTML = "";
+
+  // Filtra los eventos por término de búsqueda y categorías seleccionadas
+  const eventosFiltrados = data.events.filter((evento) => {
+    const nombreEnMinuscula = evento.name.toLowerCase();
+    return (
+      nombreEnMinuscula.includes(searchTerm) &&
+      (categoriasSeleccionadas.length === 0 ||
+        categoriasSeleccionadas.includes(evento.category))
+    );
+  });
+
+  // Muestra los eventos filtrados en el contenedor de resultados
+  mostrarResultados(eventosFiltrados);
+});
+
