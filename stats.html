@@ -12,9 +12,6 @@
 </head>
 
 <body style="background-color: black; color: white;">
-    <script src="./main.js"></script>
-
-
     <img src="./assets/amazing_brand.png" class="img-fluid" alt="">
     <!-- MENÚ -->
     <nav>
@@ -40,15 +37,13 @@
 
     <nav class="navbar bg-body-tertiary " data-bs-theme="dark">
         <div class="container-fluid">
-
             <h1>Stats</h1>
-
         </div>
     </nav>
     <!-- -_-_-_-_-_-_-_-_ -->
 
     <div class="table-container">
-        <table class="custom-table">
+        <table class="custom-table" id="eventStatsTable">
             <legend>Event Statistics</legend>
             <thead>
                 <tr>
@@ -59,81 +54,64 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>--</td>
-                    <td>--</td>
-                    <td>--</td>
+
                 </tr>
             </tbody>
         </table>
-        <div class="table-container">
-            <table class="custom-table">
-                <legend>Upcoming Event Statistics by Category</legend>
-                <thead>
-                    <tr>
-                        <th>Categories</th>
-                        <th>Revenues</th>
-                        <th>Percentage of assistance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="table-container">
-                <table class="custom-table">
-                    <legend>Past Event Statistics by Category</legend>
-                    <thead>
-                        <tr>
-                            <th>Categories</th>
-                            <th>Revenues</th>
-                            <th>Percentage of assistance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                        </tr>
-                    </tbody>
-                </table>
+    </div>
 
-            </div>
+    <div class="table-container">
+        <table class="custom-table" id="upcomingEventStatsTable">
+            <legend>Upcoming Event Statistics by Category</legend>
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th>Revenues</th>
+                    <th>Percentage of assistance</th>
+                </tr>
+            </thead>
+            <tbody>
 
-            <!-- -_-_-_-_-_-_-_-_ -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-            <footer class="footer">
-                <a href="https://www.facebook.com/" target="_blank">
-                    <img src="./assets/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="./assets/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://web.whatsapp.com/" target="_blank">
-                    <img src="./assets/whatsapp.png" alt="WhatsApp">
-                </a>
-            </footer>
+    <div class="table-container">
+        <table class="custom-table" id="pastEventStatsTable">
+            <legend>Past Event Statistics by Category</legend>
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                    <th>Revenues</th>
+                    <th>Percentage of assistance</th>
+                </tr>
+            </thead>
+            <tbody>
 
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
+    <!-- -_-_-_-_-_-_-_-_ -->
 
+    <footer class="footer">
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="./assets/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="./assets/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://web.whatsapp.com/" target="_blank">
+            <img src="./assets/whatsapp.png" alt="WhatsApp">
+        </a>
+    </footer>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-                crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="./js/stats.js"></script>
 </body>
 
 </html>

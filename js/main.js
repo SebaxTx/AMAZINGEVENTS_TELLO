@@ -1,5 +1,10 @@
+// Definir la URL de la API
+const apiUrl = "https://mindhub-xj03.onrender.com/api/amazing";
+
+// Obtener una referencia al contenedor de tarjetas
 let tarjetasContainer = document.getElementById("tarjetas-container");
 
+// Función para mostrar las tarjetas de eventos
 function mostrarTarjetas(eventos) {
   // Borra el contenido existente del contenedor
   tarjetasContainer.innerHTML = "";
@@ -19,7 +24,7 @@ function mostrarTarjetas(eventos) {
             <h5 class="card-title" style="color: #a30ab1;">${evento.name}</h5>
             <ul>
               <li><b>Description:</b> ${evento.description}</li>
-              <li><b>Date:</b> ${evento.date}</li>
+              <li><b>Price:</b> $${evento.price}</li>
             </ul>
           </div>
           <a href="./details.html?eventId=${evento._id}" class="btn btn-primary details-button"><b>Details</b></a>
@@ -32,25 +37,13 @@ function mostrarTarjetas(eventos) {
   });
 }
 
-mostrarTarjetas(data.events);
-
-// Maneja la búsqueda cuando se hace clic en el botón "Search"
-searchButton.addEventListener("click", function () {
-  const searchTerm = searchInput.value.trim().toLowerCase();
-  const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();
-
-  // Filtra los eventos por término de búsqueda y categorías seleccionadas
-  const eventosFiltrados = data.events.filter((evento) => {
-    const nombreEnMinuscula = evento.name.toLowerCase();
-    return (
-      nombreEnMinuscula.includes(searchTerm) &&
-      (categoriasSeleccionadas.length === 0 ||
-        categoriasSeleccionadas.includes(evento.category))
-    );
+// Realizar una solicitud a la API utilizando fetch
+fetch(apiUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    // Llamar a la función mostrarTarjetas con los datos obtenidos
+    mostrarTarjetas(data.events);
+  })
+  .catch((error) => {
+    console.error("Error al obtener datos de la API:", error);
   });
-
-  // Muestra los eventos filtrados en el contenedor de tarjetas
-  mostrarTarjetas(eventosFiltrados);
-});
-
-
